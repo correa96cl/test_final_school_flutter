@@ -1,0 +1,14 @@
+{
+  "description": "Help Desk",
+    "personalInformation": "Informação pessoal",
+    "requiredField": "Campo Requerido",
+    "name": "Nome",
+      "email":"Email",
+  "emailHint": "Digita teu mail",
+   "submitInfo": "Enviar Informação",
+   "nameHint": "Type your name",
+    "homePage": "Tela inicial",
+  "detalhe": "Detalhe",
+  "profile": "Perfil"
+
+}

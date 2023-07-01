@@ -1,0 +1,14 @@
+{
+     "description": "Mesa de Ayuda",
+       "personalInformation": "Información personal",
+       "requiredField": "Campo requerido",
+       "name": "Nombre",
+         "email":"Correo Electrónico",
+  "emailHint": "Digita tu correo electronico",
+   "submitInfo": "Enviar",
+   "nameHint": "Type your name",
+    "homePage": "Pagina Principal",
+  "detalhe": "Detalles",
+  "profile": "Perfil"
+
+}

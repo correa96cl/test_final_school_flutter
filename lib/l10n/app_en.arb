@@ -1,0 +1,14 @@
+{
+  "description": "Help Desk",
+  "personalInformation": "Personal Information",
+  "requiredField": "Required Field",
+  "name": "Name",
+  "email":"Email",
+  "emailHint": "Type your email",
+  "submitInfo": "Submit",
+  "nameHint": "Type your name",
+  "homePage": "Home Page",
+  "detalhe": "Details",
+  "profile": "Profile"
+
+}
