@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:test_final_school_flutter_mjv/constantes/language_constants.dart';
 import 'package:test_final_school_flutter_mjv/constantes/languages.dart';
 import 'package:test_final_school_flutter_mjv/main.dart';
+import 'package:test_final_school_flutter_mjv/provider/issue_provider.dart';
 import 'package:test_final_school_flutter_mjv/router/route_constantes.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,6 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final GlobalKey<FormState> _key = GlobalKey<FormState>();
+  late IssueProvider store;
 
   void _showSuccessDialog() {
     showTimePicker(context: context, initialTime: TimeOfDay.now());
