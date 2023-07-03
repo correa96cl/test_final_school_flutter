@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 import 'package:test_final_school_flutter_mjv/constantes/language_constants.dart';
+import 'package:test_final_school_flutter_mjv/provider/root_provider.dart';
 import 'package:test_final_school_flutter_mjv/router/custom_routes.dart';
 import 'package:test_final_school_flutter_mjv/router/route_constantes.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(providers: RootProvider.providers(),
+  child: const MyApp(),));
 }
 
 class MyApp extends StatefulWidget {
@@ -39,7 +42,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Localization',
+      title: 'MJV Help Desk',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,

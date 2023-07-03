@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
             height: MediaQuery.of(context).size.height / 4,
             child: Center(
               child: Text(
-                translation(context).personalInformation,
+                translation(context).issueInformation,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 30,

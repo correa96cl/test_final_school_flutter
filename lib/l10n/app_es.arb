@@ -1,6 +1,6 @@
 {
      "description": "Mesa de Ayuda",
-       "personalInformation": "Información personal",
+       "issueInformation": "Información llamado",
        "requiredField": "Campo requerido",
        "name": "Nombre",
          "email":"Correo Electrónico",
@@ -9,6 +9,13 @@
    "nameHint": "Type your name",
     "homePage": "Pagina Principal",
   "detalhe": "Detalles",
-  "profile": "Perfil"
-
+  "profile": "Perfil",
+   "issueNumbers": "Número de llamadas",
+    "personalInformation": "Información Personal",
+    "employeerName": "Nombre",
+  "employeeMail": "Correo electronico ",
+  "employeeTelefone": "Telefono Celular",
+  "employeeFunction": "Cargo",
+  "employeeCustomer": "Cliente",
+  "employeeDateBirth": "Fecha de Nascimiento"
 }

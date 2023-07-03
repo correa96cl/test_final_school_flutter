@@ -1,6 +1,6 @@
 {
   "description": "Help Desk",
-  "personalInformation": "Personal Information",
+  "issueInformation": "Issue Information",
   "requiredField": "Required Field",
   "name": "Name",
   "email":"Email",
@@ -9,6 +9,13 @@
   "nameHint": "Type your name",
   "homePage": "Home Page",
   "detalhe": "Details",
-  "profile": "Profile"
-
+  "profile": "Profile",
+  "issueNumbers": "Issues numbers",
+  "personalInformation": "Personal Information",
+  "employeerName":"Name",
+  "employeeMail": "E-mail",
+  "employeeTelefone": "Phone",
+  "employeeFunction": "Function",
+  "employeeCustomer": "Customer",
+  "employeeDateBirth": "Date of Birth"
 }

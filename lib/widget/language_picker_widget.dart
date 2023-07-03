@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test_final_school_flutter_mjv/l10n/L10.dart';
 
-
 class LanguageWidget extends StatelessWidget {
-
-const LanguageWidget({Key? key}) : super(key: key);
+  const LanguageWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +11,7 @@ const LanguageWidget({Key? key}) : super(key: key);
 
     return Center(
       child: CircleAvatar(
+        backgroundImage: const AssetImage('/image/image.jpeg'),
         backgroundColor: Colors.white,
         radius: 72,
         child: Text(
@@ -23,5 +22,3 @@ const LanguageWidget({Key? key}) : super(key: key);
     );
   }
 }
-
-
