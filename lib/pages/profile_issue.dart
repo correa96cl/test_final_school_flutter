@@ -33,245 +33,76 @@ class _ProfileIssue extends State<ProfileIssue> {
                 const SpacerComponent(size: 16, isHorizontal: true),
                 const Text('Marcelo Andres Valderrama Correa',
                     style: TextStyle(fontWeight: FontWeight.bold)),
-                    const SizedBox(width: 8),
+                const SizedBox(width: 8),
                 const SpacerComponent(isFull: true),
-                const Text(
-                  'Minhas estatísticas',
-                  style: TextStyle(fontSize: 18),
-                )
               ]),
             ),
           ),
           const SpacerComponent(),
-          const Text(
-            'Minhas estatísticas',
-            style: TextStyle(fontSize: 18),
-          ),
           const SizedBox(height: 16),
           Row(children: [
-            const Icon(Icons.list),
+            const Icon(Icons.format_list_bulleted_sharp),
             const SizedBox(width: 8),
-            const Text('Total de notas: '),
-            Text(store.listaIssues.length.toString()),
+            Text(
+              translation(context).employeeFunction.toString() + ': ',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+            Text(' Assesor de Tecnologia'),
           ]),
           const SpacerComponent(),
           Row(children: [
-            const Icon(Icons.list),
+            const Icon(Icons.format_list_bulleted_sharp),
             const SizedBox(width: 8),
-            const Text('Concluídas: '),
-            Text(store.listaIssues
-                .where((element) => element.isConcluido == true)
-                .length
-                .toString()),
+            Text(
+              translation(context).employeeMail.toString() + ": ",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+            Text('marcelo.correa@mjv.com.br'),
           ]),
           const SpacerComponent(),
-          const SpacerComponent(isHorizontal: true, isFull: true),
-          const SpacerComponent(),
-          const Text(
-            'Minhas estatísticas',
-            style: TextStyle(fontSize: 18),
+          Row(
+            children: [
+              const Icon(Icons.format_list_bulleted_sharp),
+              const SizedBox(
+                width: 8,
+              ),
+              Text(
+                translation(context).employeeTelefone.toString() + ": ",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
+              Text('(21) - 980038543')
+            ],
           ),
-          const SizedBox(height: 16),
-          Row(children: [
-            const Text('Tema escuro'),
-            const SpacerComponent(isHorizontal: true),
-            /*Switch(
-            value: storeConfig.tema == ThemeMode.dark,
-            onChanged: (val) {
-              storeConfig.tema = val ? ThemeMode.dark : ThemeMode.light;
-            },
-          )*/
-          ])
+          const SpacerComponent(),
+           Row(
+            children: [
+              const Icon(Icons.format_list_bulleted_sharp),
+              const SizedBox(
+                width: 8,
+              ),
+              Text(
+                translation(context).employeeDateBirth.toString() + ": ",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
+              Text('25-06-1981')
+            ],
+          ),
+          const SpacerComponent(),
+          Row(
+            children: [
+              const Icon(Icons.format_list_bulleted_sharp),
+              const SizedBox(
+                width: 8,
+              ),
+              Text(
+                translation(context).employeeCustomer.toString() + ": ",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
+              Text('Bradesco Seguros')
+            ],
+          )
         ]),
-      ), /*Container(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Card(
-              margin: const EdgeInsets.all(0),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Row(children: [
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                  Align(
-                      alignment: Alignment.centerRight,
-                      child: const CircleAvatar(
-                        radius: 62,
-                        child: Text(
-                          'MV',
-                          style: TextStyle(
-                              fontSize: 40, fontWeight: FontWeight.bold),
-                        ),
-                      )),
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                ]),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(0),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Row(children: [
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                  Text(
-                    translation(context).employeerName + ' : ',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  const Text('Marcelo Andres Valderrama Correa'),
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                ]),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(0),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Row(children: [
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                  Text(
-                    translation(context).employeeMail + ' : ',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  const Text('correa96cl@hotmail.com'),
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                ]),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(0),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Row(children: [
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                  Text(
-                    translation(context).employeeDateBirth + ' : ',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  const Text('25-06-1981'),
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                ]),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(0),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Row(children: [
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                  Text(
-                    translation(context).employeeTelefone + ' : ',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  const Text('(21) - 98000000'),
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                ]),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(0),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Row(children: [
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                  Text(
-                    translation(context).employeeCustomer + ' : ',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  const Text('Bradesco Seguros'),
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                ]),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(0),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Row(children: [
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                  Text(
-                    translation(context).employeeFunction + ' : ',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  const Text('Asesor em Tecnologia'),
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                ]),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(0),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Row(children: [
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                  Text(
-                    translation(context).issueNumbers + ' : ',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  Text(store.listaIssues.length.toString()),
-                  const SpacerComponent(
-                    size: 8,
-                    isHorizontal: true,
-                  ),
-                ]),
-              ),
-            )
-          ],
-        ),
-      ),*/
+      ),
     );
   }
 }

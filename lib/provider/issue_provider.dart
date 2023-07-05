@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_final_school_flutter_mjv/entities/issue.dart';
+import 'package:test_final_school_flutter_mjv/entities/issue_entity.dart';
 import 'package:test_final_school_flutter_mjv/service/issue_service.dart';
 
 class IssueProvider with ChangeNotifier{

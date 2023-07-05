@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:test_final_school_flutter_mjv/entities/issue.dart';
+import 'package:test_final_school_flutter_mjv/entities/issue_entity.dart';
 
 class IssueService {
 
