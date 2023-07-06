@@ -32,7 +32,9 @@ class IssueProvider with ChangeNotifier{
         return SimpleDialog(
           contentPadding: const EdgeInsets.all(16),
           children: [
-           IssueForm(context),
+           IssueForm(context, callback: (item){
+            listaIssues = [item, ...listaIssues];
+           } ),
           ],
         );
       },

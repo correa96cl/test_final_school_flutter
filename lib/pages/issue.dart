@@ -11,7 +11,7 @@ class IssueForm extends StatefulWidget {
   const IssueForm(BuildContext context, {Key? key, required this.callback}) : super(key: key);
 
   @override
-  _IssueFormState createState() => _IssueFormState();
+  State<IssueForm> createState() => _IssueFormState();
 }
 
 enum TipoCliente {
@@ -43,13 +43,18 @@ class _IssueFormState extends State<IssueForm> {
         nomeCliente: _descricaoController.text,
       );
       print('Hola');
-      print(item);
+      
 
 
         widget.callback(item);
         Navigator.pop(context);
       
     }
+  }
+
+  @override
+  void initState() {
+    super.initState();
   }
 
   @override
@@ -128,7 +133,7 @@ class _IssueFormState extends State<IssueForm> {
           ),
           TextFormField(
             maxLines: 4,
-            controller: _titleController,
+            controller: _descricaoController,
             validator: (val) {
               if (val != null && val.isEmpty) {
                 return translation(context).requiredField;
@@ -145,6 +150,7 @@ class _IssueFormState extends State<IssueForm> {
             height: 10,
           ),
           TextFormField(
+            controller: _titleController,
             validator: (val) {
               if (val != null && val.isEmpty) {
                 return translation(context).requiredField;
@@ -165,9 +171,11 @@ class _IssueFormState extends State<IssueForm> {
           ),
           MaterialButton(
             onPressed: () {
+             
               if (_key.currentState != null && _key.currentState!.validate()) {
                 handleSubmit;
               }
+              //print(_descricaoController.text);
             },
             height: 50,
             shape: const StadiumBorder(),
