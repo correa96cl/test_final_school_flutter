@@ -61,7 +61,7 @@ class _LanguaguesComponent extends State<LanguaguesComponent> {
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
-        child: IssueForm(context),
+        //child: IssueForm(context),
       ),
     );
   }

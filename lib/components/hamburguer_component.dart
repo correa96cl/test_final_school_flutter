@@ -46,26 +46,6 @@ class HamburguerComponent extends StatefulWidget {
               
             },
           ),
-           ListTile(
-            leading: const Icon(
-              Icons.settings,
-              color: Colors.white,
-              size: 30,
-            ),
-            title: Text(
-              translation(context).issueInformation,
-              style: TextStyle(
-      color: Colors.white,
-      fontSize: 24,
-    ),
-            ),
-            onTap: () {
-              // To close the Drawer
-              Navigator.pop(context);
-              // Navigating to About Page
-              Navigator.pushNamed(context, profileRoute);
-            },
-          ),
         ],
       );
   }

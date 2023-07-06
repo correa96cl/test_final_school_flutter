@@ -17,5 +17,10 @@
   "employeeTelefone": "Telefono Celular",
   "employeeFunction": "Cargo",
   "employeeCustomer": "Cliente",
-  "employeeDateBirth": "Fecha de Nascimiento"
+  "employeeDateBirth": "Fecha de Nascimiento",
+    "selectOffice": "Selecionar Oficina",
+    "selectCustomer": "Selecionar Cliente",
+      "descriptionHint": "Digitar una descricion del problema",
+        "descriptionIssue":"Descripcion del problema"
+
 }

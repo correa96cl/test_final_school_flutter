@@ -17,5 +17,9 @@
   "employeeTelefone": "Phone",
   "employeeFunction": "Function",
   "employeeCustomer": "Customer",
-  "employeeDateBirth": "Date of Birth"
+  "employeeDateBirth": "Date of Birth",
+  "selectOffice": "Select Office",
+  "selectCustomer": "Select Customer",
+  "descriptionHint": "Type the description of issue",
+  "descriptionIssue":"Description of issue"
 }

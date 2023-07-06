@@ -17,5 +17,10 @@
   "employeeTelefone": "Telefone",
   "employeeFunction": "cargo",
   "employeeCustomer": "Cliente",
-  "employeeDateBirth": "Data de nascimento"
+  "employeeDateBirth": "Data de nascimento",
+    "selectOffice": "Selecionar Escritorio",
+      "selectCustomer": "Selecionar Cliente",
+        "descriptionHint": "Descrição do issue"
+
+
 }

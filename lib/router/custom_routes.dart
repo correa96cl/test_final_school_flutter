@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_final_school_flutter_mjv/pages/detalhe_issue.dart';
 import 'package:test_final_school_flutter_mjv/pages/home_page.dart';
+import 'package:test_final_school_flutter_mjv/pages/home_page.dart';
 import 'package:test_final_school_flutter_mjv/pages/not_found_page.dart';
 import 'package:test_final_school_flutter_mjv/pages/profile_issue.dart';
 import 'package:test_final_school_flutter_mjv/router/route_constantes.dart';
