@@ -20,7 +20,8 @@
   "employeeDateBirth": "Data de nascimento",
     "selectOffice": "Selecionar Escritorio",
       "selectCustomer": "Selecionar Cliente",
-        "descriptionHint": "Descrição do issue"
+        "descriptionHint": "Digitar a descrição do problema",
+         "descriptionIssue":"Descrição do problema"
 
 
 }
