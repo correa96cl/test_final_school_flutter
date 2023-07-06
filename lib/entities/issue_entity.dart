@@ -26,7 +26,8 @@ class IssueEntity {
         nome: json['nome'],
         nomeCliente: json['nomeCliente'],
         dataCriacao: DateTime.fromMicrosecondsSinceEpoch(json['dataCriacao']),
-        isConcluido: json['isConcluido']);
+        isConcluido: json['isConcluido'],
+        lista: IssueslistEntity.fromJsonList(json['lista']));
   }
 
   Map<String, dynamic> toJson() {
@@ -35,8 +36,9 @@ class IssueEntity {
       'descricao': descricao,
       'nome': nome,
       'nomeCliente': nomeCliente,
-      'dataCriacao': dataCriacao,
+      'dataCriacao': dataCriacao.toIso8601String(),
       'isConcluido': isConcluido,
+      'lista': lista,
     };
   }
 

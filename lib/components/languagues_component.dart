@@ -1,8 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:test_final_school_flutter_mjv/components/hamburguer_component.dart';
+import 'package:test_final_school_flutter_mjv/components/lista_issues.dart';
 import 'package:test_final_school_flutter_mjv/constantes/language_constants.dart';
 import 'package:test_final_school_flutter_mjv/constantes/languages.dart';
-import 'package:test_final_school_flutter_mjv/pages/issue.dart';
 
 import '../main.dart';
 
@@ -17,6 +18,9 @@ class LanguaguesComponent extends StatefulWidget {
 class _LanguaguesComponent extends State<LanguaguesComponent> {
   @override
   Widget build(BuildContext context) {
+
+     final List<Widget> conteudos = [const ListaIssues()];
+
     return Scaffold(
       appBar: AppBar(
         title: Text(translation(context).description),
@@ -59,9 +63,9 @@ class _LanguaguesComponent extends State<LanguaguesComponent> {
       drawer: Drawer(
         child: _drawerList(),
       ),
-      body: SingleChildScrollView(
+      body: Container(
         padding: const EdgeInsets.all(20),
-        //child: IssueForm(context),
+        child: conteudos.elementAt(0),
       ),
     );
   }

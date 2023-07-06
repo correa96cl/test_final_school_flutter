@@ -6,9 +6,10 @@ import 'package:uuid/uuid.dart';
 import '../constantes/language_constants.dart';
 
 class IssueForm extends StatefulWidget {
-    final void Function(IssueEntity item) callback;
+  final void Function(IssueEntity item) callback;
 
-  const IssueForm(BuildContext context, {Key? key, required this.callback}) : super(key: key);
+  const IssueForm(BuildContext context, {Key? key, required this.callback})
+      : super(key: key);
 
   @override
   State<IssueForm> createState() => _IssueFormState();
@@ -25,7 +26,7 @@ enum TipoCliente {
 enum TipoEscritorio { seleccione, rj, pr, sp, alph, col, pt, ita, usa, fra }
 
 class _IssueFormState extends State<IssueForm> {
-  final GlobalKey<FormState> _key = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
   final _titleController = TextEditingController();
   final _descricaoController = TextEditingController();
 
@@ -33,34 +34,34 @@ class _IssueFormState extends State<IssueForm> {
   TipoEscritorio dropdownEscritorioValue = TipoEscritorio.seleccione;
 
   void handleSubmit() {
-    final isValido = _key.currentState!.validate();
+    final isValido = _formKey.currentState!.validate();
     if (isValido) {
       final item = IssueEntity(
         uuid: const Uuid().v4(),
-        nome: _titleController.text,
         descricao: _descricaoController.text,
-        dataCriacao: DateTime.now(),
+        nome: _titleController.text,
         nomeCliente: _descricaoController.text,
+        dataCriacao: DateTime.now(),
+        isConcluido: false,
+        lista: [],
       );
-      print('Hola');
-      
 
-
-        widget.callback(item);
-        Navigator.pop(context);
-      
+      widget.callback(item);
+      Navigator.pop(context);
     }
   }
 
   @override
   void initState() {
     super.initState();
+    _descricaoController.text = '';
+    _titleController.text = '';
   }
 
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: _key,
+      key: _formKey,
       child: Column(
         children: <Widget>[
           SizedBox(
@@ -170,13 +171,14 @@ class _IssueFormState extends State<IssueForm> {
             height: 10,
           ),
           MaterialButton(
-            onPressed: () {
-             
-              if (_key.currentState != null && _key.currentState!.validate()) {
+            /*onPressed: () {
+              if (_formKey.currentState != null &&
+                  _formKey.currentState!.validate()) {
                 handleSubmit;
               }
-              //print(_descricaoController.text);
-            },
+            },*/
+            onPressed: 
+            handleSubmit,
             height: 50,
             shape: const StadiumBorder(),
             color: Theme.of(context).primaryColor,
